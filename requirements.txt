@@ -1,2 +1,2 @@
 aiosmtpd
-O365
+msal
