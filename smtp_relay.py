@@ -143,7 +143,7 @@ class ControllerStarttls(UnthreadedController):
 
 
 def authenticator_func(server, session, envelope, mechanism, auth_data: LoginPassword):
-    if auth_data.login.decode('utf-8') != os.environ.get('SMTP_USERNAME') or auth_data.password.decode(
+    if auth_data.login.decode('utf-8') not in os.environ.get('SMTP_USERNAME').split(',') or auth_data.password.decode(
             'utf-8') != os.environ.get('SMTP_PASSWORD'):
         return AuthResult(success=False)
 
