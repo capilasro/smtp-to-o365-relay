@@ -29,4 +29,4 @@ jobs:
         with:
           push: true
           file: Dockerfile
-          tags: ghcr.io/matuszelenak/smtp-o365-relay:latest
+          tags: ghcr.io/capilasro/smtp-o365-relay:latest
